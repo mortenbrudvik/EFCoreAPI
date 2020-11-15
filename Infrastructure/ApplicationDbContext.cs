@@ -9,6 +9,8 @@ namespace Infrastructure
         public DbSet<Author> Authors { get; set; }
         public DbSet<BookType> BookTypes { get; set; }
 
+        public ApplicationDbContext() { }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
             ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
