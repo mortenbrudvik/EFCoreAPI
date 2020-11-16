@@ -11,6 +11,7 @@ namespace IntegrationTests
             using var context = new ApplicationDbContextMock();
             context.Database.EnsureCreated();
         }
+
         [Fact]
         public void CanInsertAuthorIntoDb()
         {

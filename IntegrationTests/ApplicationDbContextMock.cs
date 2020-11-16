@@ -5,13 +5,7 @@ namespace IntegrationTests
 {
     public class ApplicationDbContextMock : ApplicationDbContext
     {
-        public ApplicationDbContextMock()
-        {
-            
-        }
-        public ApplicationDbContextMock(DbContextOptions<ApplicationDbContext> options) : base(options)
-        {
-        }
+        public ApplicationDbContextMock() { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
