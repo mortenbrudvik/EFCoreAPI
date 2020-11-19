@@ -13,7 +13,7 @@ namespace IntegrationTests
         {
             var builder = new DbContextOptionsBuilder();
             builder.UseInMemoryDatabase("MemDb");
-            using var context = new ApplicationDbContext(builder.Options);
+            using var context = new ApplicationDbContextMock(builder.Options);
 
             var author = new Author {Name = "Peter F. Hamilton"};
             context.Authors.Add(author);

@@ -10,7 +10,7 @@ namespace Infrastructure
         public DbSet<BookType> BookTypes { get; set; }
 
         public ApplicationDbContext() { }
-        public ApplicationDbContext(DbContextOptions options) : base(options){}
+        protected ApplicationDbContext(DbContextOptions options) : base(options){}
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
